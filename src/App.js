@@ -4,6 +4,8 @@ import "./App.css";
 
 class App extends Component {
     render() {
+        // TEST 02：测试Fundebug监控throw的错误
+        // throw new Error("TEST 02");
         return (
             <div className="App">
                 <header className="App-header">
