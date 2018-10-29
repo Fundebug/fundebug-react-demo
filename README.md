@@ -50,3 +50,7 @@ class ErrorBoundary extends React.Component {
 
 ReactDOM.render( < ErrorBoundary > < App / > < /ErrorBoundary>, document.getElementById('root'));
 ```
+
+### 参考
+
+- [Fundebug文档 - 监控React](https://docs.fundebug.com/notifier/javascript/framework/react.html)
