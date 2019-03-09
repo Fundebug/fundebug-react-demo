@@ -5,11 +5,16 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 var fundebug = require("fundebug-javascript");
-// 配置apikey
-fundebug.apikey = "API-KEY";
+require("fundebug-revideo");
+fundebug.apikey =
+    "f24f3b42fd3124c501961746c4768e0945edaefda04b58d84f30a1137b33be13";
 
 // TEST01: 测试fundebug.notify接口，阔以收到报警邮件
-fundebug.notify("TEST 01", "Hello, Fundebug!");
+// fundebug.notify("TEST 01", "Hello, Fundebug!");
+
+setTimeout(function() {
+    fundebug.test();
+}, 5000);
 
 class ErrorBoundary extends React.Component {
     constructor(props) {

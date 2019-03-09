@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "fundebug-javascript": "^1.2.3",
+    "fundebug-javascript": "^1.3.0",
+    "fundebug-revideo": "^0.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
