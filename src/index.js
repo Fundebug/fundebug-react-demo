@@ -5,16 +5,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 var fundebug = require("fundebug-javascript");
-require("fundebug-revideo");
-fundebug.apikey =
-    "f24f3b42fd3124c501961746c4768e0945edaefda04b58d84f30a1137b33be13";
+fundebug.apikey = "API-KEY";
 
-// TEST01: 测试fundebug.notify接口，阔以收到报警邮件
-// fundebug.notify("TEST 01", "Hello, Fundebug!");
+// require("fundebug-revideo");
 
-setTimeout(function() {
-    fundebug.test();
-}, 5000);
+// fundebug.test();
+
+// var a = [];
+// console.log(a[0].b);
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -24,7 +22,7 @@ class ErrorBoundary extends React.Component {
 
     componentDidCatch(error, info) {
         this.setState({ hasError: true });
-        // 将component中的报错发送到Fundebug
+        // 将报错发送到Fundebug
         fundebug.notifyError(error, {
             metaData: {
                 info: info
@@ -35,7 +33,8 @@ class ErrorBoundary extends React.Component {
     render() {
         if (this.state.hasError) {
             return null;
-            // Note: 也可以在出错的component处展示出错信息，返回自定义的结果。
+            // 也可以在出错的component处展示出错信息
+            // return <h1>出错了!</h1>;
         }
         return this.props.children;
     }
